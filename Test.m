@@ -10,12 +10,12 @@ for i = 1:20
     M1 = M(i,:);
     n1 = N(1,n);
     tic 
-    M1 = Bubble_Sort(M1,n1);
-    %M1 = Insertion_Sort(M1,n1);
-    %M1 = Selection_Sort(M1,n1);
-    %M1 = Merge_Sort( M1,1,n1);
-    %M1 = Quick_Sort( M1,1,n1); 
-    Time(1,i) = toc;                     %获得运行时间
+    M1 = Bubble_Sort(M1,n1);            %冒泡排序
+    %M1 = Insertion_Sort(M1,n1);        %插入排序
+    %M1 = Selection_Sort(M1,n1);        %选择排序
+    %M1 = Merge_Sort( M1,1,n1);         %合并排序
+    %M1 = Quick_Sort( M1,1,n1);         %快速排序
+    Time(1,i) = toc;                    %获得运行时间
     M(i,:) = M1;
 end
 disp(['数据规模为',num2str(N(1,n)),'时,平均运行时间为：',num2str(mean(Time)),'s']);  %输出平均运行时间
